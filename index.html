@@ -13,22 +13,23 @@
         
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
             min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             padding: 20px;
         }
         
         .container {
+            max-width: 1200px;
+            margin: 0 auto;
             background: white;
             border-radius: 20px;
             padding: 40px;
-            max-width: 600px;
-            width: 100%;
             box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        
+        .header {
             text-align: center;
+            margin-bottom: 40px;
         }
         
         .logo {
@@ -38,64 +39,152 @@
         
         h1 {
             color: #e74c3c;
-            font-size: 32px;
+            font-size: 36px;
             margin-bottom: 10px;
         }
         
         .subtitle {
             color: #7f8c8d;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        
+        .stats {
+            background: #f8f9fa;
+            padding: 15px 30px;
+            border-radius: 10px;
+            display: inline-block;
+            margin-top: 15px;
+        }
+        
+        .stats span {
+            margin: 0 15px;
             font-size: 16px;
-            margin-bottom: 30px;
+        }
+        
+        .stats strong {
+            color: #e74c3c;
+            font-size: 20px;
+        }
+        
+        .buttons {
+            text-align: center;
+            margin: 30px 0;
         }
         
         .btn {
             display: inline-block;
             background: #e74c3c;
             color: white;
-            padding: 15px 40px;
+            padding: 15px 35px;
             border-radius: 50px;
             text-decoration: none;
-            font-size: 18px;
+            font-size: 16px;
             font-weight: bold;
-            margin: 10px;
+            margin: 8px;
             transition: all 0.3s;
-            box-shadow: 0 4px 15px rgba(231, 76, 60, 0.4);
+            box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
         }
         
         .btn:hover {
             background: #c0392b;
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(231, 76, 60, 0.6);
+            box-shadow: 0 6px 20px rgba(231, 76, 60, 0.5);
         }
         
         .btn-secondary {
             background: #3498db;
-            box-shadow: 0 4px 15px rgba(52, 152, 219, 0.4);
+            box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
         }
         
         .btn-secondary:hover {
             background: #2980b9;
-            box-shadow: 0 6px 20px rgba(52, 152, 219, 0.6);
+            box-shadow: 0 6px 20px rgba(52, 152, 219, 0.5);
         }
         
-        .info {
-            background: #f8f9fa;
-            padding: 20px;
-            border-radius: 10px;
-            margin-top: 30px;
-            text-align: left;
+        .section {
+            margin: 40px 0;
         }
         
-        .info h2 {
+        .section h2 {
             color: #2c3e50;
-            font-size: 20px;
-            margin-bottom: 15px;
+            font-size: 24px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #e74c3c;
         }
         
-        .info ul {
-            color: #555;
-            line-height: 1.8;
-            padding-left: 20px;
+        .matches-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .match-card {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            transition: all 0.3s;
+            border-left: 4px solid #e74c3c;
+        }
+        
+        .match-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .match-card.away {
+            border-left-color: #3498db;
+        }
+        
+        .match-number {
+            color: #95a5a6;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+        
+        .match-date {
+            color: #e74c3c;
+            font-weight: bold;
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+        
+        .match-opponent {
+            color: #2c3e50;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        
+        .match-info {
+            color: #7f8c8d;
+            font-size: 14px;
+        }
+        
+        .venue-badge {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 15px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+        
+        .venue-badge.home {
+            background: #ffe0e0;
+            color: #c0392b;
+        }
+        
+        .venue-badge.away {
+            background: #e0f0ff;
+            color: #2980b9;
+        }
+        
+        .highlight {
+            background: #fff3cd;
+            border-left-color: #ffc107 !important;
         }
         
         .url-box {
@@ -113,57 +202,183 @@
             background: #fff3cd;
             border-left: 4px solid #ffc107;
             padding: 15px;
-            margin-top: 20px;
+            margin: 20px 0;
             border-radius: 5px;
-            text-align: left;
         }
         
-        .warning strong {
-            color: #856404;
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ecf0f1;
+            color: #95a5a6;
+            font-size: 14px;
+        }
+        
+        .footer a {
+            color: #e74c3c;
+            text-decoration: none;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 28px;
+            }
+            
+            .matches-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="logo">⚽️</div>
-        <h1>上海海港2026赛季</h1>
-        <p class="subtitle">中超联赛赛程日历</p>
+        <div class="header">
+            <div class="logo">⚽️</div>
+            <h1>上海海港2026赛季</h1>
+            <p class="subtitle">中超联赛完整赛程 · 真实数据</p>
+            <div class="stats">
+                <span>🏟️ <strong>15</strong> 主场</span>
+                <span>✈️ <strong>15</strong> 客场</span>
+                <span>📅 <strong>30</strong> 场比赛</span>
+            </div>
+        </div>
         
-        <div>
-            <a href="shanghai_port_2026.ics" class="btn" download>
-                📥 下载ICS文件
+        <div class="buttons">
+            <a href="2026-calendar.ics" class="btn" download>
+                📥 下载日历文件
+            </a>
+            <a href="2026-calendar.ics" class="btn btn-secondary">
+                📱 订阅到日历
+            </a>
+            <a href="2026-schedule.md" class="btn" target="_blank">
+                📋 查看赛程表
+            </a>
+            <a href="2026-schedule.json" class="btn btn-secondary" target="_blank">
+                📊 JSON数据
             </a>
         </div>
         
-        <div>
-            <a href="shanghai_port_2026.ics" class="btn btn-secondary">
-                📱 订阅日历
-            </a>
+        <div class="section">
+            <h2>📅 已完成比赛</h2>
+            <div class="matches-grid" id="completed-matches">
+                <!-- 动态加载 -->
+            </div>
         </div>
         
-        <div class="info">
-            <h2>📅 如何使用</h2>
-            <ul>
-                <li><strong>方法1 - 订阅:</strong> 复制下方链接到日历应用</li>
-                <li><strong>方法2 - 下载:</strong> 点击下载按钮，用日历应用打开</li>
-                <li><strong>iOS用户:</strong> 点击链接自动导入</li>
-                <li><strong>安卓用户:</strong> 下载后用日历应用打开</li>
-            </ul>
+        <div class="section">
+            <h2>🏟️ 即将进行 - 主场比赛</h2>
+            <div class="matches-grid" id="home-matches">
+                <!-- 动态加载 -->
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>✈️ 即将进行 - 客场比赛</h2>
+            <div class="matches-grid" id="away-matches">
+                <!-- 动态加载 -->
+            </div>
         </div>
         
         <div class="url-box" id="calendar-url">
-            <!-- URL will be set by JavaScript -->
+            <!-- 动态生成订阅链接 -->
         </div>
         
         <div class="warning">
-            <strong>⚠️ 注意:</strong> 赛程数据为模拟数据，实际赛程请以中超官方发布为准。开球时间默认为19:35，实际时间可能有调整。
+            <strong>⚠️ 重要提示:</strong><br>
+            赛程数据来源于 <a href="https://fbref.com" target="_blank">fbref.com</a> 的真实数据。<br>
+            开球时间可能因天气、转播等原因调整，请以官方通知为准。
+        </div>
+        
+        <div class="footer">
+            <p>
+                数据来源: <a href="https://fbref.com/en/squads/c48512d3/2026/Shanghai-Port-Stats" target="_blank">FBref.com</a> | 
+                GitHub: <a href="https://github.com/glenman/shanghai-port-calendar" target="_blank">shanghai-port-calendar</a>
+            </p>
+            <p style="margin-top: 10px;">
+                最后更新: 2026-03-30 | Made with ❤️ for 上海海港球迷
+            </p>
         </div>
     </div>
     
     <script>
-        // 动态生成订阅链接
-        const url = window.location.href.replace('index.html', '') + 'shanghai_port_2026.ics';
-        document.getElementById('calendar-url').textContent = url;
+        // 加载赛程数据
+        fetch('2026-schedule.json')
+            .then(response => response.json())
+            .then(data => {
+                displayMatches(data.matches);
+                updateUrl();
+            })
+            .catch(err => console.error('加载数据失败:', err));
+        
+        function displayMatches(matches) {
+            const now = new Date();
+            const completed = [];
+            const home = [];
+            const away = [];
+            
+            matches.forEach(match => {
+                const matchDate = new Date(match.date);
+                
+                if (matchDate <= now) {
+                    completed.push(match);
+                } else {
+                    if (match.venue === 'Home') {
+                        home.push(match);
+                    } else {
+                        away.push(match);
+                    }
+                }
+            });
+            
+            renderMatches('completed-matches', completed);
+            renderMatches('home-matches', home);
+            renderMatches('away-matches', away);
+        }
+        
+        function renderMatches(containerId, matches) {
+            const container = document.getElementById(containerId);
+            
+            if (matches.length === 0) {
+                container.innerHTML = '<p style="color: #95a5a6; padding: 20px;">暂无比赛</p>';
+                return;
+            }
+            
+            container.innerHTML = matches.map(match => {
+                const venueClass = match.venue === 'Home' ? '' : 'away';
+                const venueText = match.venue === 'Home' ? '主场' : '客场';
+                const venueBadge = match.venue === 'Home' ? 'home' : 'away';
+                
+                // 标记德比战
+                const isDerby = match.opponent_cn.includes('上海申花');
+                const highlight = isDerby ? 'highlight' : '';
+                
+                return `
+                    <div class="match-card ${venueClass} ${highlight}">
+                        <div class="match-number">第 ${match.match_number} 轮</div>
+                        <div class="match-date">${match.date} ${match.time}</div>
+                        <div class="match-opponent">
+                            ${isDerby ? '⚔️ ' : ''}${match.opponent_cn}
+                        </div>
+                        <div class="match-info">
+                            <span class="venue-badge ${venueBadge}">${venueText}</span>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+        
+        function updateUrl() {
+            const url = window.location.href.replace('index.html', '') + '2026-calendar.ics';
+            document.getElementById('calendar-url').innerHTML = `
+                <strong>📅 订阅链接:</strong><br>
+                ${url}
+            `;
+        }
     </script>
 </body>
 </html>

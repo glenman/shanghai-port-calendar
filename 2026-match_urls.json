@@ -1,0 +1,36 @@
+{
+  "team": "Shanghai Port FC",
+  "team_cn": "上海海港",
+  "season": 2026,
+  "competition": "Chinese Super League (中超联赛)",
+  "data_source": "fbref.com",
+  "team_id": "c48512d3",
+  "last_updated": "2026-03-30",
+  "total_matches": 3,
+  "match_urls": [
+    {
+      "match_number": 1,
+      "date": "2026-03-07",
+      "opponent": "Henan",
+      "venue": "Home",
+      "result": "L 1-2",
+      "match_report_url": "https://fbref.com/en/matches/8807142c/Shanghai-Port-Henan-March-7-2026-Chinese-Super-League"
+    },
+    {
+      "match_number": 2,
+      "date": "2026-03-15",
+      "opponent": "Qingdao West Coast",
+      "venue": "Home",
+      "result": "W 4-1",
+      "match_report_url": "https://fbref.com/en/matches/ac36a31c/Shanghai-Port-Qingdao-West-Coast-March-15-2026-Chinese-Super-League"
+    },
+    {
+      "match_number": 3,
+      "date": "2026-03-20",
+      "opponent": "Dalian Yingbo",
+      "venue": "Away",
+      "result": "L 0-1",
+      "match_report_url": "https://fbref.com/en/matches/b57dc0e1/Dalian-Yingbo-Shanghai-Port-March-20-2026-Chinese-Super-League"
+    }
+  ]
+}
