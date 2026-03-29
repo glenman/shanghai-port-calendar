@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>上海海港2026赛季赛程日历</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 600px;
+            width: 100%;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            text-align: center;
+        }
+        
+        .logo {
+            font-size: 60px;
+            margin-bottom: 20px;
+        }
+        
+        h1 {
+            color: #e74c3c;
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            color: #7f8c8d;
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: #e74c3c;
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            margin: 10px;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(231, 76, 60, 0.4);
+        }
+        
+        .btn:hover {
+            background: #c0392b;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(231, 76, 60, 0.6);
+        }
+        
+        .btn-secondary {
+            background: #3498db;
+            box-shadow: 0 4px 15px rgba(52, 152, 219, 0.4);
+        }
+        
+        .btn-secondary:hover {
+            background: #2980b9;
+            box-shadow: 0 6px 20px rgba(52, 152, 219, 0.6);
+        }
+        
+        .info {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 30px;
+            text-align: left;
+        }
+        
+        .info h2 {
+            color: #2c3e50;
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .info ul {
+            color: #555;
+            line-height: 1.8;
+            padding-left: 20px;
+        }
+        
+        .url-box {
+            background: #ecf0f1;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            word-break: break-all;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            color: #2c3e50;
+        }
+        
+        .warning {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 5px;
+            text-align: left;
+        }
+        
+        .warning strong {
+            color: #856404;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">⚽️</div>
+        <h1>上海海港2026赛季</h1>
+        <p class="subtitle">中超联赛赛程日历</p>
+        
+        <div>
+            <a href="shanghai_port_2026.ics" class="btn" download>
+                📥 下载ICS文件
+            </a>
+        </div>
+        
+        <div>
+            <a href="shanghai_port_2026.ics" class="btn btn-secondary">
+                📱 订阅日历
+            </a>
+        </div>
+        
+        <div class="info">
+            <h2>📅 如何使用</h2>
+            <ul>
+                <li><strong>方法1 - 订阅:</strong> 复制下方链接到日历应用</li>
+                <li><strong>方法2 - 下载:</strong> 点击下载按钮，用日历应用打开</li>
+                <li><strong>iOS用户:</strong> 点击链接自动导入</li>
+                <li><strong>安卓用户:</strong> 下载后用日历应用打开</li>
+            </ul>
+        </div>
+        
+        <div class="url-box" id="calendar-url">
+            <!-- URL will be set by JavaScript -->
+        </div>
+        
+        <div class="warning">
+            <strong>⚠️ 注意:</strong> 赛程数据为模拟数据，实际赛程请以中超官方发布为准。开球时间默认为19:35，实际时间可能有调整。
+        </div>
+    </div>
+    
+    <script>
+        // 动态生成订阅链接
+        const url = window.location.href.replace('index.html', '') + 'shanghai_port_2026.ics';
+        document.getElementById('calendar-url').textContent = url;
+    </script>
+</body>
+</html>
