@@ -26,7 +26,7 @@
     {"match_number": 12, "date": "2026-05-15", "time": "19:35", "venue": "Home", "opponent": "Zhejiang", "opponent_cn": "浙江队"},
     {"match_number": 13, "date": "2026-05-19", "time": "20:00", "venue": "Away", "opponent": "Chengdu Rongcheng", "opponent_cn": "成都蓉城"},
     {"match_number": 14, "date": "2026-05-23", "time": "19:00", "venue": "Home", "opponent": "Jinmen Tiger", "opponent_cn": "天津津门虎"},
-    {"match_number": 15, "date": "2026-05-29", "time": "19:35", "venue": "Away", "opponent": "Shenyang Urban FC", "opponent_cn": "沈阳城建"},
+    {"match_number": 15, "date": "2026-05-29", "time": "19:35", "venue": "Away", "opponent": "Shenyang Urban FC", "opponent_cn": "辽宁铁人"},
     {"match_number": 16, "date": "2026-06-27", "time": "19:35", "venue": "Away", "opponent": "Henan", "opponent_cn": "河南队"},
     {"match_number": 17, "date": "2026-07-04", "time": "19:00", "venue": "Away", "opponent": "Qingdao West Coast", "opponent_cn": "青岛西海岸"},
     {"match_number": 18, "date": "2026-07-12", "time": "19:35", "venue": "Home", "opponent": "Dalian Yingbo", "opponent_cn": "大连英博"},
@@ -41,6 +41,6 @@
     {"match_number": 27, "date": "2026-10-09", "time": "20:00", "venue": "Away", "opponent": "Zhejiang", "opponent_cn": "浙江队"},
     {"match_number": 28, "date": "2026-10-18", "time": "20:00", "venue": "Home", "opponent": "Chengdu Rongcheng", "opponent_cn": "成都蓉城"},
     {"match_number": 29, "date": "2026-10-24", "time": "15:30", "venue": "Away", "opponent": "Jinmen Tiger", "opponent_cn": "天津津门虎"},
-    {"match_number": 30, "date": "2026-11-08", "time": "15:30", "venue": "Home", "opponent": "Shenyang Urban FC", "opponent_cn": "沈阳城建"}
+    {"match_number": 30, "date": "2026-11-08", "time": "15:30", "venue": "Home", "opponent": "Shenyang Urban FC", "opponent_cn": "辽宁铁人"}
   ]
 }
