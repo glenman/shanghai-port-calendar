@@ -252,9 +252,9 @@
             <a href="shanghai_port_2026.ics" class="btn" download>
                 📥 下载日历文件（含地图定位）
             </a>
-            <a href="shanghai_port_2026.ics" class="btn btn-secondary">
+            <button class="btn btn-secondary" onclick="copySubscribeUrl()">
                 📱 订阅到日历
-            </a>
+            </button>
             <a href="2026-schedule.md" class="btn" target="_blank">
                 📋 查看赛程表
             </a>
@@ -379,6 +379,15 @@
                 <strong>📅 订阅链接:</strong><br>
                 ${url}
             `;
+        }
+
+        function copySubscribeUrl() {
+            const url = window.location.href.replace('index.html', '') + 'shanghai_port_2026.ics';
+            navigator.clipboard.writeText(url).then(() => {
+                alert('✅ 订阅链接已复制到剪贴板，粘贴到日历 App 即可订阅！');
+            }).catch(() => {
+                prompt('复制以下链接到日历 App:', url);
+            });
         }
     </script>
 </body>
