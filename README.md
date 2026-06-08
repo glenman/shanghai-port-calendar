@@ -1,4 +1,4 @@
-# 上海海港 2026赛季赛程日历 📅
+# 2026 FIFA World Cup 观赛日历 🏆
 
 ![Shanghai Port FC](https://img.shields.io/badge/Shanghai%20Port-2026%20Season-red)
 ![Matches](https://img.shields.io/badge/Matches-30-brightgreen)

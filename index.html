@@ -3,382 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>上海海港2026赛季赛程日历</title>
+    <title>2026 FIFA 世界杯观赛日程表</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
-            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
-            min-height: 100vh;
-            padding: 20px;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            background: white;
-            border-radius: 20px;
-            padding: 40px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-        }
-        
-        .header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-        
-        .logo {
-            font-size: 60px;
-            margin-bottom: 20px;
-        }
-        
-        h1 {
-            color: #e74c3c;
-            font-size: 36px;
-            margin-bottom: 10px;
-        }
-        
-        .subtitle {
-            color: #7f8c8d;
-            font-size: 18px;
-            margin-bottom: 10px;
-        }
-        
-        .stats {
-            background: #f8f9fa;
-            padding: 15px 30px;
-            border-radius: 10px;
-            display: inline-block;
-            margin-top: 15px;
-        }
-        
-        .stats span {
-            margin: 0 15px;
-            font-size: 16px;
-        }
-        
-        .stats strong {
-            color: #e74c3c;
-            font-size: 20px;
-        }
-        
-        .buttons {
-            text-align: center;
-            margin: 30px 0;
-        }
-        
-        .btn {
-            display: inline-block;
-            background: #e74c3c;
-            color: white;
-            padding: 15px 35px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-size: 16px;
-            font-weight: bold;
-            margin: 8px;
-            transition: all 0.3s;
-            box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
-        }
-        
-        .btn:hover {
-            background: #c0392b;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(231, 76, 60, 0.5);
-        }
-        
-        .btn-secondary {
-            background: #3498db;
-            box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
-        }
-        
-        .btn-secondary:hover {
-            background: #2980b9;
-            box-shadow: 0 6px 20px rgba(52, 152, 219, 0.5);
-        }
-        
-        .section {
-            margin: 40px 0;
-        }
-        
-        .section h2 {
-            color: #2c3e50;
-            font-size: 24px;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 3px solid #e74c3c;
-        }
-        
-        .matches-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
-        }
-        
-        .match-card {
-            background: #f8f9fa;
-            border-radius: 10px;
-            padding: 20px;
-            transition: all 0.3s;
-            border-left: 4px solid #e74c3c;
-        }
-        
-        .match-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-        
-        .match-card.away {
-            border-left-color: #3498db;
-        }
-        
-        .match-number {
-            color: #95a5a6;
-            font-size: 14px;
-            margin-bottom: 8px;
-        }
-        
-        .match-date {
-            color: #e74c3c;
-            font-weight: bold;
-            font-size: 16px;
-            margin-bottom: 8px;
-        }
-        
-        .match-opponent {
-            color: #2c3e50;
-            font-size: 18px;
-            font-weight: bold;
-            margin-bottom: 8px;
-        }
-        
-        .match-info {
-            color: #7f8c8d;
-            font-size: 14px;
-        }
-        
-        .venue-badge {
-            display: inline-block;
-            padding: 3px 10px;
-            border-radius: 15px;
-            font-size: 12px;
-            font-weight: bold;
-            margin-right: 8px;
-        }
-        
-        .venue-badge.home {
-            background: #ffe0e0;
-            color: #c0392b;
-        }
-        
-        .venue-badge.away {
-            background: #e0f0ff;
-            color: #2980b9;
-        }
-        
-        .highlight {
-            background: #fff3cd;
-            border-left-color: #ffc107 !important;
-        }
-        
-        .url-box {
-            background: #ecf0f1;
-            padding: 15px;
-            border-radius: 8px;
-            margin: 20px 0;
-            word-break: break-all;
-            font-family: 'Courier New', monospace;
-            font-size: 14px;
-            color: #2c3e50;
-        }
-        
-        .warning {
-            background: #fff3cd;
-            border-left: 4px solid #ffc107;
-            padding: 15px;
-            margin: 20px 0;
-            border-radius: 5px;
-        }
-        
-        .footer {
-            text-align: center;
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid #ecf0f1;
-            color: #95a5a6;
-            font-size: 14px;
-        }
-        
-        .footer a {
-            color: #e74c3c;
-            text-decoration: none;
-        }
-        
-        @media (max-width: 768px) {
-            .container {
-                padding: 20px;
-            }
-            
-            h1 {
-                font-size: 28px;
-            }
-            
-            .matches-grid {
-                grid-template-columns: 1fr;
-            }
-        }
+        :root { --primary: #326e55; --accent: #b39cd7; --bg: #f7f7f7; --card: #ffffff; }
+        body { font-family: 'PingFang SC', 'Helvetica Neue', sans-serif; background: var(--bg); color: #333; margin: 0; padding: 20px; }
+        .container { max-width: 900px; margin: 0 auto; }
+        header { text-align: center; margin-bottom: 30px; }
+        h1 { color: var(--primary); margin: 10px 0 5px; }
+        p { color: #666; font-size: 0.9rem; }
+        .calendar-controls { text-align: center; margin: 20px 0; }
+        button { background: var(--primary); color: #fff; border: none; padding: 10px 20px; border-radius: 20px; cursor: pointer; font-size: 1rem; margin: 5px; }
+        button:hover { opacity: 0.9; }
+        .match-card { background: var(--card); border-radius: 12px; padding: 20px; margin-bottom: 15px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border-left: 5px solid var(--primary); }
+        .group-badge { background: var(--accent); color: #fff; padding: 4px 12px; border-radius: 12px; font-size: 0.8rem; margin-bottom: 10px; display: inline-block; }
+        .time-row { display: flex; justify-content: space-between; font-size: 1.1rem; margin-bottom: 15px; }
+        .time-beijing { font-weight: bold; color: var(--primary); }
+        .match-name { text-align: center; font-size: 1.5rem; font-weight: 700; margin-bottom: 5px; }
+        .stadium { text-align: center; color: #777; font-size: 0.9rem; margin-bottom: 20px; }
+        .subscribe-section { text-align: center; margin: 40px 0 20px; padding: 20px; background: #fff; border-radius: 12px; }
+        .footer { text-align: center; margin-top: 40px; font-size: 0.8rem; color: #999; }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <div class="logo">⚽️</div>
-            <h1>上海海港2026赛季</h1>
-            <p class="subtitle">中超联赛完整赛程 · 真实数据</p>
-            <div class="stats">
-                <span>🏟️ <strong>15</strong> 主场</span>
-                <span>✈️ <strong>15</strong> 客场</span>
-                <span>📅 <strong>30</strong> 场比赛</span>
-            </div>
+        <header>
+            <h1>🏆 2026 FIFA World Cup 🇺🇸🇲🇽🇨🇦</h1>
+            <p>观赛日程表 · 北京时间显示 · 自动订阅功能</p>
+        </header>
+
+        <div id="calendar-app">
+            <!-- 日程卡内容将通过 JS 动态加载 -->
         </div>
-        
-        <div class="buttons">
-            <a href="2026-calendar.ics" class="btn" download>
-                📥 下载日历文件
-            </a>
-            <a href="2026-calendar.ics" class="btn btn-secondary">
-                📱 订阅到日历
-            </a>
-            <a href="2026-schedule.md" class="btn" target="_blank">
-                📋 查看赛程表
-            </a>
-            <a href="2026-schedule.json" class="btn btn-secondary" target="_blank">
-                📊 JSON数据
-            </a>
-        </div>
-        
-        <div class="section">
-            <h2>📅 已完成比赛</h2>
-            <div class="matches-grid" id="completed-matches">
-                <!-- 动态加载 -->
-            </div>
-        </div>
-        
-        <div class="section">
-            <h2>🏟️ 即将进行 - 主场比赛</h2>
-            <div class="matches-grid" id="home-matches">
-                <!-- 动态加载 -->
-            </div>
-        </div>
-        
-        <div class="section">
-            <h2>✈️ 即将进行 - 客场比赛</h2>
-            <div class="matches-grid" id="away-matches">
-                <!-- 动态加载 -->
-            </div>
-        </div>
-        
-        <div class="url-box" id="calendar-url">
-            <!-- 动态生成订阅链接 -->
-        </div>
-        
-        <div class="warning">
-            <strong>⚠️ 重要提示:</strong><br>
-            赛程数据来源于 <a href="https://fbref.com" target="_blank">fbref.com</a> 的真实数据。<br>
-            开球时间可能因天气、转播等原因调整，请以官方通知为准。
+
+        <div class="subscribe-section">
+            <h3>📱 订阅/下载日历</h3>
+            <p>支持导入 iPhone (iOS)、Android、Google Calendar 及 Outlook。</p>
+            <button onclick="window.location.href='/worldcup2026.ics'">下载 ICS 日历文件</button>
         </div>
         
         <div class="footer">
-            <p>
-                数据来源: <a href="https://fbref.com/en/squads/c48512d3/2026/Shanghai-Port-Stats" target="_blank">FBref.com</a> | 
-                GitHub: <a href="https://github.com/glenman/shanghai-port-calendar" target="_blank">shanghai-port-calendar</a>
-            </p>
-            <p style="margin-top: 10px;">
-                最后更新: 2026-03-30 | Made with ❤️ for 上海海港球迷
-            </p>
+            © 2026 WorldCup2026-Calendar · Powered by Glenman
         </div>
     </div>
-    
+
     <script>
-        // 加载赛程数据
-        fetch('2026-schedule.json')
-            .then(response => response.json())
-            .then(data => {
-                displayMatches(data.matches);
-                updateUrl();
-            })
-            .catch(err => console.error('加载数据失败:', err));
-        
-        function displayMatches(matches) {
-            const now = new Date();
-            const completed = [];
-            const home = [];
-            const away = [];
-            
-            matches.forEach(match => {
-                const matchDate = new Date(match.date);
-                
-                if (matchDate <= now) {
-                    completed.push(match);
-                } else {
-                    if (match.venue === 'Home') {
-                        home.push(match);
-                    } else {
-                        away.push(match);
-                    }
-                }
-            });
-            
-            renderMatches('completed-matches', completed);
-            renderMatches('home-matches', home);
-            renderMatches('away-matches', away);
-        }
-        
-        function renderMatches(containerId, matches) {
-            const container = document.getElementById(containerId);
-            
-            if (matches.length === 0) {
-                container.innerHTML = '<p style="color: #95a5a6; padding: 20px;">暂无比赛</p>';
-                return;
-            }
-            
-            container.innerHTML = matches.map(match => {
-                const venueClass = match.venue === 'Home' ? '' : 'away';
-                const venueText = match.venue === 'Home' ? '主场' : '客场';
-                const venueBadge = match.venue === 'Home' ? 'home' : 'away';
-                
-                // 标记德比战
-                const isDerby = match.opponent_cn.includes('上海申花');
-                const highlight = isDerby ? 'highlight' : '';
-                
-                return `
-                    <div class="match-card ${venueClass} ${highlight}">
-                        <div class="match-number">第 ${match.match_number} 轮</div>
-                        <div class="match-date">${match.date} ${match.time}</div>
-                        <div class="match-opponent">
-                            ${isDerby ? '⚔️ ' : ''}${match.opponent_cn}
+        const matches = [
+            { stage: "小组赛", group: "F组", time: "2026-06-12 14:00", location: "MetLife Stadium", match: "🇺🇸 美国 vs 葡萄牙", stageType: "揭幕战" },
+            { stage: "小组赛", group: "E组", time: "2026-06-13 16:00", location: "AT&T Stadium", match: "🇧🇷 巴西 vs 德国", stageType: "强强对话" }
+        ];
+
+        function renderCalendar() {
+            const container = document.getElementById('calendar-app');
+            matches.forEach(m => {
+                container.innerHTML += `
+                    <div class="match-card">
+                        <span class="group-badge">${m.group} | ${m.stage}</span>
+                        <div class="match-name">${m.match}</div>
+                        <div class="stadium">📍 ${m.location}</div>
+                        <div class="time-row">
+                            <span>北京时间: <strong>${m.time}</strong></span>
+                            <span>${m.stageType}</span>
                         </div>
-                        <div class="match-info">
-                            <span class="venue-badge ${venueBadge}">${venueText}</span>
-                        </div>
+                        <button onclick="addToCalendar('${m.match}', '${m.time}')">添加到日历</button>
                     </div>
                 `;
-            }).join('');
+            });
         }
-        
-        function updateUrl() {
-            const url = window.location.href.replace('index.html', '') + '2026-calendar.ics';
-            document.getElementById('calendar-url').innerHTML = `
-                <strong>📅 订阅链接:</strong><br>
-                ${url}
-            `;
-        }
+        renderCalendar();
     </script>
 </body>
 </html>
