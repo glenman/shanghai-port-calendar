@@ -220,6 +220,18 @@
             text-decoration: none;
         }
         
+        .visitor-counter {
+            margin-top: 15px;
+            font-size: 12px;
+            color: #bdc3c7;
+        }
+        
+        .visitor-counter span {
+            color: #e74c3c;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        
         @media (max-width: 768px) {
             .container {
                 padding: 20px;
@@ -303,6 +315,9 @@
             <p style="margin-top: 10px;">
                 最后更新: 2026-06-08 | Made with ❤️ for 上海海港球迷
             </p>
+            <div class="visitor-counter">
+                👀 本站已被访问 <span id="visitor-count">加载中...</span> 次
+            </div>
         </div>
     </div>
     
@@ -389,6 +404,30 @@
                 prompt('复制以下链接到日历 App:', url);
             });
         }
+        
+        // 页面访问量统计
+        function loadVisitorCount() {
+            const ns = 'shanghai-port-calendar';
+            const key = 'visits';
+            // 先递增计数
+            fetch(`https://countapi.xyz/api/${ns}/${key}/increment/?add=1`) // 递增
+                .then(() => {
+                    // 再获取当前计数
+                    return fetch(`https://countapi.xyz/get/${ns}/${key}/`);
+                })
+                .then(res => res.json())
+                .then(data => {
+                    document.getElementById('visitor-count').textContent = data.value;
+                })
+                .catch(() => {
+                    // 如果 API 不可用，隐藏计数器
+                    const el = document.querySelector('.visitor-counter');
+                    if (el) el.style.display = 'none';
+                });
+        }
+        
+        // 延迟加载，避免阻塞页面
+        setTimeout(loadVisitorCount, 2000);
     </script>
 </body>
 </html>
