@@ -1,60 +1,88 @@
 #!/usr/bin/env python3
-"""Generate ICS calendar with GEO (map location) support for Shanghai Port FC 2026 season."""
+"""Generate ICS calendar with GEO (map location) support for Shanghai Port FC 2026 season.
+
+数据源: schedule.json (含超级杯/中超/足协杯/亚冠全部赛事)
+输出: shanghai_port_2026_with_geo.ics (含地图定位)
+"""
 
 import json
 from datetime import datetime, timedelta
 
-# Chinese stadium coordinates (latitude, longitude)
+# 球场坐标 (纬度,经度) - 含中超/足协杯/亚冠全部球场
 STADIUM_COORDS = {
-    # 上海海港主场
-    "上海浦东足球场": {"geo": "31.1456,121.6008", "name": "上海浦东足球场"},
-    "上海体育场": {"geo": "30.6778,121.4394", "name": "上海体育场（八万人体育场）"},
-    # 各客队球场
+    # 上海主场
+    "上海体育场": {"geo": "31.1447,121.4394", "name": "上海体育场（八万人体育场）"},
+    "上汽浦东足球场": {"geo": "31.2050,121.6290", "name": "上汽浦东足球场"},
+    "浦东足球场": {"geo": "31.2050,121.6290", "name": "浦东足球场"},
+    # 中超客场
+    "大连梭鱼湾足球场": {"geo": "38.8630,121.5910", "name": "大连梭鱼湾足球场"},
+    "济南奥体中心": {"geo": "36.8280,117.0930", "name": "济南奥体中心"},
+    "青岛国信体育场": {"geo": "36.0671,120.3826", "name": "青岛国信体育场"},
+    "青岛西海岸体育场": {"geo": "36.0850,120.3930", "name": "青岛西海岸体育场"},
+    "北京工人体育场": {"geo": "39.9303,116.4380", "name": "北京工人体育场"},
+    "成都凤凰山体育场": {"geo": "30.8783,104.0947", "name": "成都凤凰山体育场"},
     "郑州航海体育场": {"geo": "34.7447,113.7278", "name": "郑州航海体育场"},
-    "成都凤凰山体育公园": {"geo": "30.8783,104.0947", "name": "成都凤凰山体育公园"},
-    "杭州黄龙体育中心": {"geo": "30.2844,120.1367", "name": "杭州黄龙体育中心"},
-    "北京国安（工人体育场）": {"geo": "39.9303,116.4380", "name": "北京工人体育场"},
+    "沈阳奥体中心": {"geo": "41.6230,123.5060", "name": "沈阳奥体中心"},
     "武汉体育中心": {"geo": "30.5812,114.1312", "name": "武汉体育中心"},
     "深圳大运中心": {"geo": "22.7156,114.4114", "name": "深圳大运中心"},
-    "重庆奥体中心": {"geo": "29.5286,106.4697", "name": "重庆奥体中心"},
-    "青岛体育场": {"geo": "36.0671,120.3826", "name": "青岛新华锦体育场"},
-    "青岛青春足球场": {"geo": "36.0850,120.3930", "name": "青岛青春足球场"},
-    "厦门奥体中心": {"geo": "24.4570,118.0920", "name": "厦门奥体中心"},
-    "天津泰达体育场": {"geo": "39.1469,117.2650", "name": "天津泰达体育场"},
-    "大连梭鱼湾专业足球场": {"geo": "38.8630,121.5910", "name": "大连梭鱼湾专业足球场"},
-    "济南奥体中心": {"geo": "36.8280,117.0930", "name": "济南奥体中心"},
-    "辽宁铁人（沈阳浑南）": {"geo": "41.6230,123.5060", "name": "沈阳浑南足球训练基地"},
-    "云南大学津桥学院": {"geo": "25.0420,102.7220", "name": "云南大学津桥学院"},
-    "广州天河体育场": {"geo": "23.1300,113.3280", "name": "广州天河体育场"},
-    "长沙贺龙体育场": {"geo": "28.2000,112.9380", "name": "长沙贺龙体育中心"},
+    "重庆龙兴体育场": {"geo": "29.5286,106.4697", "name": "重庆龙兴体育场"},
+    "玉溪高原体育场": {"geo": "24.3510,102.5460", "name": "玉溪高原体育场"},
+    "杭州黄龙体育中心": {"geo": "30.2844,120.1367", "name": "杭州黄龙体育中心"},
+    "天津奥体中心": {"geo": "39.1469,117.2650", "name": "天津奥体中心"},
+    # 超级杯
+    "南京奥体中心": {"geo": "32.0030,118.7240", "name": "南京奥体中心"},
+    # 亚冠客场 (海外)
+    "叻丕体育场": {"geo": "13.5280,99.8130", "name": "叻丕体育场 (Ratchaburi Stadium)"},
+    "纽卡斯尔体育场": {"geo": "-32.9280,151.7760", "name": "纽卡斯尔体育场 (Newcastle Stadium)"},
+    "浦项钢园球场": {"geo": "36.0130,129.3650", "name": "浦项钢园球场 (Pohang Steel Yard)"},
+    "全州世界杯竞技场": {"geo": "35.8380,127.1460", "name": "全州世界杯竞技场 (Jeonju World Cup Stadium)"},
 }
 
-def resolve_venue(venue_type, opponent_cn):
-    """根据主客场和对阵球队解析场馆名。"""
-    if venue_type == "Home":
-        # 默认主场：上海浦东足球场
-        return "上海浦东足球场", STADIUM_COORDS["上海浦东足球场"]["geo"]
-    else:
-        # 客场：根据对手确定球场
-        away_map = {
-            "河南队": ("郑州航海体育场", STADIUM_COORDS["郑州航海体育场"]["geo"]),
-            "山东泰山": ("济南奥体中心", STADIUM_COORDS["济南奥体中心"]["geo"]),
-            "北京国安": ("北京国安（工人体育场）", STADIUM_COORDS["北京国安（工人体育场）"]["geo"]),
-            "浙江队": ("杭州黄龙体育中心", STADIUM_COORDS["杭州黄龙体育中心"]["geo"]),
-            "成都蓉城": ("成都凤凰山体育公园", STADIUM_COORDS["成都凤凰山体育公园"]["geo"]),
-            "武汉三镇": ("武汉体育中心", STADIUM_COORDS["武汉体育中心"]["geo"]),
-            "深圳队": ("深圳大运中心", STADIUM_COORDS["深圳大运中心"]["geo"]),
-            "上海申花": ("上海体育场", STADIUM_COORDS["上海体育场"]["geo"]),
-            "重庆铜梁龙": ("重庆奥体中心", STADIUM_COORDS["重庆奥体中心"]["geo"]),
-            "青岛西海岸": ("青岛青春足球场", STADIUM_COORDS["青岛青春足球场"]["geo"]),
-            "青岛海牛": ("青岛新华锦体育场", STADIUM_COORDS["青岛体育场"]["geo"]),
-            "天津津门虎": ("天津泰达体育场", STADIUM_COORDS["天津泰达体育场"]["geo"]),
-            "大连英博": ("大连梭鱼湾专业足球场", STADIUM_COORDS["大连梭鱼湾专业足球场"]["geo"]),
-            "辽宁铁人": ("辽宁铁人（沈阳浑南）", STADIUM_COORDS["辽宁铁人（沈阳浑南）"]["geo"]),
-            "云南玉昆": ("云南大学津桥学院", STADIUM_COORDS["云南大学津桥学院"]["geo"]),
-            "沈阳城市": ("辽宁铁人（沈阳浑南）", STADIUM_COORDS["辽宁铁人（沈阳浑南）"]["geo"]),
-        }
-        return away_map.get(opponent_cn, ("未知球场", "0.0,0.0"))
+# 赛事类型 → 日历分组描述
+COMPETITION_DESC = {
+    "超级杯": "超级杯",
+    "中超": "中超联赛",
+    "足协杯": "足协杯",
+    "亚冠": "亚冠精英联赛",
+}
+
+
+def resolve_venue(venue_name):
+    """根据球场名查找坐标，找不到则返回默认值。"""
+    entry = STADIUM_COORDS.get(venue_name)
+    if entry:
+        return venue_name, entry["geo"]
+    return venue_name, "0.0,0.0"
+
+
+def build_description(match):
+    """构建 ICS DESCRIPTION 字段。"""
+    comp = COMPETITION_DESC.get(match.get("type", ""), match.get("type", ""))
+    is_home = match["homeTeam"] == "上海海港"
+    home_away = "主场" if is_home else "客场"
+    opponent = match["awayTeam"] if is_home else match["homeTeam"]
+
+    lines = [
+        f"{comp} 2026赛季 {match.get('round', '')}",
+        f"上海海港 {home_away} vs {opponent}",
+        f"球场: {match.get('venue', '未知')}",
+    ]
+
+    if match.get("status") == "已结束" and match.get("result", "-") != "-":
+        lines.append(f"比分: {match['result']}")
+        scorers = match.get("scorers")
+        if scorers:
+            home_scorers = scorers.get("home", [])
+            away_scorers = scorers.get("away", [])
+            if home_scorers:
+                lines.append(f"{match['homeTeam']}进球: {', '.join(home_scorers)}")
+            if away_scorers:
+                lines.append(f"{match['awayTeam']}进球: {', '.join(away_scorers)}")
+
+    if match.get("referee") and match["referee"] != "未知":
+        lines.append(f"裁判: {match['referee']}")
+
+    return "\n".join(lines)
 
 
 def generate_ics(matches, output_file):
@@ -67,7 +95,7 @@ def generate_ics(matches, output_file):
         "METHOD:PUBLISH",
         "X-WR-CALNAME:上海海港2026赛季赛程",
         "X-WR-TIMEZONE:Asia/Shanghai",
-        "X-WR-CALDESC:上海海港足球俱乐部2026赛季中超联赛赛程（含地图定位）",
+        "X-WR-CALDESC:上海海港足球俱乐部2026赛季赛程（超级杯/中超/足协杯/亚冠，含地图定位）",
     ]
 
     for match in matches:
@@ -75,22 +103,22 @@ def generate_ics(matches, output_file):
         dt_end = dt_start + timedelta(hours=2)
         dt_stamp = datetime.utcnow().strftime("%Y%m%dT%H%M%SZ")
 
-        venue_name, geo = resolve_venue(match["venue"], match["opponent_cn"])
+        venue_name, geo = resolve_venue(match.get("venue", ""))
+        is_home = match["homeTeam"] == "上海海港"
+        opponent = match["awayTeam"] if is_home else match["homeTeam"]
+        comp = COMPETITION_DESC.get(match.get("type", ""), match.get("type", ""))
+        home_away = "主" if is_home else "客"
 
-        home_away = "主" if match["venue"] == "Home" else "客"
-        description = (
-            f"中超联赛 2026赛季\n"
-            f"上海海港 {'主场' if match['venue']=='Home' else '客场'} vs {match['opponent_cn']}\n"
-            f"球场: {venue_name}"
-        )
+        description = build_description(match)
+        summary = f"上海海港 {home_away}场 vs {opponent} ({comp})"
 
         lines.extend([
             "BEGIN:VEVENT",
             f"DTSTART;TZID=Asia/Shanghai:{dt_start.strftime('%Y%m%dT%H%M%S')}",
             f"DTEND;TZID=Asia/Shanghai:{dt_end.strftime('%Y%m%dT%H%M%S')}",
             f"DTSTAMP:{dt_stamp}",
-            f"UID:shanghai-port-2026-{match['date']}-{match['opponent_cn']}@shanghaiport.com",
-            f"SUMMARY:上海海港 vs {match['opponent_cn']}",
+            f"UID:shanghai-port-2026-{match['id']}-{match['date']}@shanghaiport.com",
+            f"SUMMARY:{summary}",
             f"DESCRIPTION:{description.replace(chr(10), chr(13) + chr(10))}",
             f"LOCATION:{venue_name}",
             f"GEO:{geo}",
@@ -105,15 +133,14 @@ def generate_ics(matches, output_file):
 
     print(f"✅ ICS文件已生成: {output_file}")
     print(f"   共 {len(matches)} 场比赛")
-    print(f"   每场比赛包含 GEO 坐标，可在日历中直接地图定位")
 
 
 if __name__ == "__main__":
-    with open("2026-schedule.json", "r", encoding="utf-8") as f:
-        data = json.load(f)
+    with open("schedule.json", "r", encoding="utf-8") as f:
+        matches = json.load(f)
+
+    # 按日期排序
+    matches.sort(key=lambda m: m["date"])
 
     # 生成带地图定位的ICS
-    generate_ics(data["matches"], "shanghai_port_2026_with_geo.ics")
-
-    # 同时生成原版（不覆盖）
-    # generate_ics(data["matches"], "shanghai_port_2026.ics")
+    generate_ics(matches, "shanghai_port_2026_with_geo.ics")

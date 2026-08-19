@@ -187,6 +187,35 @@
             background: #fff3cd;
             border-left-color: #ffc107 !important;
         }
+
+        .comp-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 11px;
+            font-weight: bold;
+            margin-right: 6px;
+        }
+
+        .comp-badge.中超 { background: #ffe0e0; color: #c0392b; }
+        .comp-badge.足协杯 { background: #e8f5e9; color: #2e7d32; }
+        .comp-badge.亚冠 { background: #fff3e0; color: #e65100; }
+        .comp-badge.超级杯 { background: #f3e5f5; color: #7b1fa2; }
+
+        .match-result {
+            display: inline-block;
+            background: #ecf0f1;
+            padding: 2px 8px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-top: 6px;
+        }
+
+        .match-result.win { background: #d4edda; color: #155724; }
+        .match-result.draw { background: #fff3cd; color: #856404; }
+        .match-result.loss { background: #f8d7da; color: #721c24; }
         
         .url-box {
             background: #ecf0f1;
@@ -253,16 +282,16 @@
         <div class="header">
             <div class="logo">⚽️</div>
             <h1>上海海港2026赛季</h1>
-            <p class="subtitle">中超联赛完整赛程 · 真实数据 · 含地图定位</p>
+            <p class="subtitle">超级杯 · 中超 · 足协杯 · 亚冠 · 真实数据 · 含地图定位</p>
             <div class="stats">
-                <span>🏟️ <strong>15</strong> 主场</span>
-                <span>✈️ <strong>15</strong> 客场</span>
-                <span>📅 <strong>30</strong> 场比赛</span>
+                <span>🏟️ <strong id="stat-home">-</strong> 主场</span>
+                <span>✈️ <strong id="stat-away">-</strong> 客场</span>
+                <span>📅 <strong id="stat-total">-</strong> 场比赛</span>
             </div>
         </div>
         
         <div class="buttons">
-            <a href="shanghai_port_2026.ics" class="btn" download>
+            <a href="shanghai_port_2026_with_geo.ics" class="btn" download>
                 📥 下载日历文件（含地图定位）
             </a>
             <button class="btn btn-secondary" onclick="copySubscribeUrl()">
@@ -271,7 +300,7 @@
             <a href="2026-schedule.md" class="btn" target="_blank">
                 📋 查看赛程表
             </a>
-            <a href="2026-schedule.json" class="btn btn-secondary" target="_blank">
+            <a href="schedule.json" class="btn btn-secondary" target="_blank">
                 📊 JSON数据
             </a>
         </div>
@@ -303,18 +332,18 @@
         
         <div class="warning">
             <strong>⚠️ 重要提示:</strong><br>
-            赛程数据来源于 <a href="https://fbref.com" target="_blank">fbref.com</a> 的真实数据。<br>
+            赛程数据包含超级杯、中超联赛、足协杯、亚冠精英联赛全部赛事。<br>
             开球时间可能因天气、转播等原因调整，请以官方通知为准。<br>
             <span style="color:#e74c3c;">📍 日历文件已添加地图定位，导入后可直接在地图上查看球场位置！</span>
         </div>
         
         <div class="footer">
             <p>
-                数据来源: <a href="https://fbref.com/en/squads/c48512d3/2026/Shanghai-Port-Stats" target="_blank">FBref.com</a> | 
+                数据来源: 上海海港赛程数据 | 
                 GitHub: <a href="https://github.com/glenman/shanghai-port-calendar" target="_blank">shanghai-port-calendar</a>
             </p>
             <p style="margin-top: 10px;">
-                最后更新: 2026-06-08 | Made with ❤️ for 上海海港球迷
+                最后更新: 2026-08-19 | Made with ❤️ for 上海海港球迷
             </p>
             <div class="visitor-counter">
                 👀 本站已被访问 <span id="busuanzi_value_site_pv"></span> 次
@@ -323,74 +352,141 @@
     </div>
     
     <script>
-        // 加载赛程数据
-        fetch('2026-schedule.json')
+        // 加载赛程数据 (schedule.json: 超级杯/中超/足协杯/亚冠)
+        fetch('schedule.json')
             .then(response => response.json())
-            .then(data => {
-                displayMatches(data.matches);
+            .then(matches => {
+                displayMatches(matches);
+                updateStats(matches);
                 updateUrl();
             })
             .catch(err => console.error('加载数据失败:', err));
-        
+
+        function getOpponent(match) {
+            return match.homeTeam === '上海海港' ? match.awayTeam : match.homeTeam;
+        }
+
+        function isHome(match) {
+            return match.homeTeam === '上海海港';
+        }
+
+        // 解析比分，返回 {hg, ag, resultClass}
+        function parseResult(match) {
+            if (match.status !== '已结束' || !match.result || match.result === '-') return null;
+            // 处理 "1-2" 或 "1-1 (点球 4-3)" 格式
+            const m = match.result.match(/^(\d+)-(\d+)/);
+            if (!m) return null;
+            const hg = parseInt(m[1]);
+            const ag = parseInt(m[2]);
+            const home = isHome(match);
+            // 上海海港视角的进球
+            const our = home ? hg : ag;
+            const their = home ? ag : hg;
+            let resultClass = 'draw';
+            if (our > their) resultClass = 'win';
+            else if (our < their) resultClass = 'loss';
+            // 检查点球
+            const pen = match.result.match(/点球\s*(\d+)-(\d+)/);
+            let penText = '';
+            if (pen) {
+                const ph = parseInt(pen[1]);
+                const pa = parseInt(pen[2]);
+                const ourP = home ? ph : pa;
+                const theirP = home ? pa : ph;
+                penText = ` (点球 ${ph}-${pa})`;
+                if (ourP > theirP) resultClass = 'win';
+                else if (ourP < theirP) resultClass = 'loss';
+            }
+            return { hg, ag, resultClass, penText, label: match.result };
+        }
+
         function displayMatches(matches) {
+            // 按日期排序
+            matches.sort((a, b) => a.date.localeCompare(b.date));
+
             const now = new Date();
             const completed = [];
             const home = [];
             const away = [];
-            
+
             matches.forEach(match => {
-                const matchDate = new Date(match.date);
-                
-                if (matchDate <= now) {
+                const matchDate = new Date(match.date + 'T' + match.time);
+                if (match.status === '已结束' || matchDate <= now) {
                     completed.push(match);
                 } else {
-                    if (match.venue === 'Home') {
+                    if (isHome(match)) {
                         home.push(match);
                     } else {
                         away.push(match);
                     }
                 }
             });
-            
+
             renderMatches('completed-matches', completed);
             renderMatches('home-matches', home);
             renderMatches('away-matches', away);
         }
-        
+
         function renderMatches(containerId, matches) {
             const container = document.getElementById(containerId);
-            
+
             if (matches.length === 0) {
                 container.innerHTML = '<p style="color: #95a5a6; padding: 20px;">暂无比赛</p>';
                 return;
             }
-            
+
             container.innerHTML = matches.map(match => {
-                const venueClass = match.venue === 'Home' ? '' : 'away';
-                const venueText = match.venue === 'Home' ? '主场' : '客场';
-                const venueBadge = match.venue === 'Home' ? 'home' : 'away';
-                
+                const home = isHome(match);
+                const venueClass = home ? '' : 'away';
+                const venueText = home ? '主场' : '客场';
+                const venueBadge = home ? 'home' : 'away';
+                const opponent = getOpponent(match);
+
                 // 标记德比战
-                const isDerby = match.opponent_cn.includes('上海申花');
+                const isDerby = opponent.includes('上海申花');
                 const highlight = isDerby ? 'highlight' : '';
-                
+
+                const comp = match.type || '';
+                const round = match.round || '';
+
+                // 赛果
+                const res = parseResult(match);
+                const resultHtml = res
+                    ? `<div class="match-result ${res.resultClass}">${res.label}</div>`
+                    : '';
+
                 return `
                     <div class="match-card ${venueClass} ${highlight}">
-                        <div class="match-number">第 ${match.match_number} 轮</div>
+                        <div class="match-number">
+                            <span class="comp-badge ${comp}">${comp}</span>${round}
+                        </div>
                         <div class="match-date">${match.date} ${match.time}</div>
                         <div class="match-opponent">
-                            ${isDerby ? '⚔️ ' : ''}${match.opponent_cn}
+                            ${isDerby ? '⚔️ ' : ''}${opponent}
                         </div>
                         <div class="match-info">
                             <span class="venue-badge ${venueBadge}">${venueText}</span>
+                            ${match.venue ? match.venue : ''}
                         </div>
+                        ${resultHtml}
                     </div>
                 `;
             }).join('');
         }
-        
+
+        function updateStats(matches) {
+            let homeCount = 0, awayCount = 0;
+            matches.forEach(m => {
+                if (isHome(m)) homeCount++;
+                else awayCount++;
+            });
+            document.getElementById('stat-home').textContent = homeCount;
+            document.getElementById('stat-away').textContent = awayCount;
+            document.getElementById('stat-total').textContent = matches.length;
+        }
+
         function updateUrl() {
-            const url = window.location.href.replace('index.html', '') + 'shanghai_port_2026.ics';
+            const url = window.location.href.replace('index.html', '') + 'shanghai_port_2026_with_geo.ics';
             document.getElementById('calendar-url').innerHTML = `
                 <strong>📅 订阅链接:</strong><br>
                 ${url}
@@ -398,14 +494,13 @@
         }
 
         function copySubscribeUrl() {
-            const url = window.location.href.replace('index.html', '') + 'shanghai_port_2026.ics';
+            const url = window.location.href.replace('index.html', '') + 'shanghai_port_2026_with_geo.ics';
             navigator.clipboard.writeText(url).then(() => {
                 alert('✅ 订阅链接已复制到剪贴板，粘贴到日历 App 即可订阅！');
             }).catch(() => {
                 prompt('复制以下链接到日历 App:', url);
             });
         }
-        
 
     </script>
 </body>

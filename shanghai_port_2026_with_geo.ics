@@ -1,399 +1,645 @@
-BEGIN:VCALENDAR
-VERSION:2.0
-PRODID:-//Shanghai Port FC Calendar//CN
-CALSCALE:GREGORIAN
-METHOD:PUBLISH
-X-WR-CALNAME:上海海港2026赛季赛程
-X-WR-TIMEZONE:Asia/Shanghai
-X-WR-CALDESC:上海海港足球俱乐部2026赛季中超联赛赛程（含地图定位）
-BEGIN:VEVENT
-DTSTART;TZID=Asia/Shanghai:20260307T193500
-DTEND;TZID=Asia/Shanghai:20260307T213500
-DTSTAMP:20260608T151601Z
-UID:shanghai-port-2026-2026-03-07-河南队@shanghaiport.com
-SUMMARY:上海海港 vs 河南队
-DESCRIPTION:中超联赛 2026赛季
-上海海港 主场 vs 河南队
-球场: 上海浦东足球场
-LOCATION:上海浦东足球场
-GEO:31.1456,121.6008
-STATUS:CONFIRMED
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=Asia/Shanghai:20260315T190000
-DTEND;TZID=Asia/Shanghai:20260315T210000
-DTSTAMP:20260608T151601Z
-UID:shanghai-port-2026-2026-03-15-青岛西海岸@shanghaiport.com
-SUMMARY:上海海港 vs 青岛西海岸
-DESCRIPTION:中超联赛 2026赛季
-上海海港 主场 vs 青岛西海岸
-球场: 上海浦东足球场
-LOCATION:上海浦东足球场
-GEO:31.1456,121.6008
-STATUS:CONFIRMED
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=Asia/Shanghai:20260320T190000
-DTEND;TZID=Asia/Shanghai:20260320T210000
-DTSTAMP:20260608T151601Z
-UID:shanghai-port-2026-2026-03-20-大连英博@shanghaiport.com
-SUMMARY:上海海港 vs 大连英博
-DESCRIPTION:中超联赛 2026赛季
-上海海港 客场 vs 大连英博
-球场: 大连梭鱼湾专业足球场
-LOCATION:大连梭鱼湾专业足球场
-GEO:38.8630,121.5910
-STATUS:CONFIRMED
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=Asia/Shanghai:20260404T193500
-DTEND;TZID=Asia/Shanghai:20260404T213500
-DTSTAMP:20260608T151601Z
-UID:shanghai-port-2026-2026-04-04-云南玉昆@shanghaiport.com
-SUMMARY:上海海港 vs 云南玉昆
-DESCRIPTION:中超联赛 2026赛季
-上海海港 主场 vs 云南玉昆
-球场: 上海浦东足球场
-LOCATION:上海浦东足球场
-GEO:31.1456,121.6008
-STATUS:CONFIRMED
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=Asia/Shanghai:20260411T193500
-DTEND;TZID=Asia/Shanghai:20260411T213500
-DTSTAMP:20260608T151601Z
-UID:shanghai-port-2026-2026-04-11-上海申花@shanghaiport.com
-SUMMARY:上海海港 vs 上海申花
-DESCRIPTION:中超联赛 2026赛季
-上海海港 客场 vs 上海申花
-球场: 上海体育场
-LOCATION:上海体育场
-GEO:30.6778,121.4394
-STATUS:CONFIRMED
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=Asia/Shanghai:20260417T193500
-DTEND;TZID=Asia/Shanghai:20260417T213500
-DTSTAMP:20260608T151601Z
-UID:shanghai-port-2026-2026-04-17-山东泰山@shanghaiport.com
-SUMMARY:上海海港 vs 山东泰山
-DESCRIPTION:中超联赛 2026赛季
-上海海港 客场 vs 山东泰山
-球场: 济南奥体中心
-LOCATION:济南奥体中心
-GEO:36.8280,117.0930
-STATUS:CONFIRMED
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=Asia/Shanghai:20260421T200000
-DTEND;TZID=Asia/Shanghai:20260421T220000
-DTSTAMP:20260608T151601Z
-UID:shanghai-port-2026-2026-04-21-重庆铜梁龙@shanghaiport.com
-SUMMARY:上海海港 vs 重庆铜梁龙
-DESCRIPTION:中超联赛 2026赛季
-上海海港 主场 vs 重庆铜梁龙
-球场: 上海浦东足球场
-LOCATION:上海浦东足球场
-GEO:31.1456,121.6008
-STATUS:CONFIRMED
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=Asia/Shanghai:20260425T200000
-DTEND;TZID=Asia/Shanghai:20260425T220000
-DTSTAMP:20260608T151601Z
-UID:shanghai-port-2026-2026-04-25-武汉三镇@shanghaiport.com
-SUMMARY:上海海港 vs 武汉三镇
-DESCRIPTION:中超联赛 2026赛季
-上海海港 主场 vs 武汉三镇
-球场: 上海浦东足球场
-LOCATION:上海浦东足球场
-GEO:31.1456,121.6008
-STATUS:CONFIRMED
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=Asia/Shanghai:20260502T190000
-DTEND;TZID=Asia/Shanghai:20260502T210000
-DTSTAMP:20260608T151601Z
-UID:shanghai-port-2026-2026-05-02-青岛海牛@shanghaiport.com
-SUMMARY:上海海港 vs 青岛海牛
-DESCRIPTION:中超联赛 2026赛季
-上海海港 客场 vs 青岛海牛
-球场: 青岛新华锦体育场
-LOCATION:青岛新华锦体育场
-GEO:36.0671,120.3826
-STATUS:CONFIRMED
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=Asia/Shanghai:20260506T193500
-DTEND;TZID=Asia/Shanghai:20260506T213500
-DTSTAMP:20260608T151601Z
-UID:shanghai-port-2026-2026-05-06-深圳新鹏城@shanghaiport.com
-SUMMARY:上海海港 vs 深圳新鹏城
-DESCRIPTION:中超联赛 2026赛季
-上海海港 主场 vs 深圳新鹏城
-球场: 上海浦东足球场
-LOCATION:上海浦东足球场
-GEO:31.1456,121.6008
-STATUS:CONFIRMED
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=Asia/Shanghai:20260510T193500
-DTEND;TZID=Asia/Shanghai:20260510T213500
-DTSTAMP:20260608T151601Z
-UID:shanghai-port-2026-2026-05-10-北京国安@shanghaiport.com
-SUMMARY:上海海港 vs 北京国安
-DESCRIPTION:中超联赛 2026赛季
-上海海港 客场 vs 北京国安
-球场: 北京国安（工人体育场）
-LOCATION:北京国安（工人体育场）
-GEO:39.9303,116.4380
-STATUS:CONFIRMED
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=Asia/Shanghai:20260515T193500
-DTEND;TZID=Asia/Shanghai:20260515T213500
-DTSTAMP:20260608T151601Z
-UID:shanghai-port-2026-2026-05-15-浙江队@shanghaiport.com
-SUMMARY:上海海港 vs 浙江队
-DESCRIPTION:中超联赛 2026赛季
-上海海港 主场 vs 浙江队
-球场: 上海浦东足球场
-LOCATION:上海浦东足球场
-GEO:31.1456,121.6008
-STATUS:CONFIRMED
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=Asia/Shanghai:20260519T200000
-DTEND;TZID=Asia/Shanghai:20260519T220000
-DTSTAMP:20260608T151601Z
-UID:shanghai-port-2026-2026-05-19-成都蓉城@shanghaiport.com
-SUMMARY:上海海港 vs 成都蓉城
-DESCRIPTION:中超联赛 2026赛季
-上海海港 客场 vs 成都蓉城
-球场: 成都凤凰山体育公园
-LOCATION:成都凤凰山体育公园
-GEO:30.8783,104.0947
-STATUS:CONFIRMED
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=Asia/Shanghai:20260523T190000
-DTEND;TZID=Asia/Shanghai:20260523T210000
-DTSTAMP:20260608T151601Z
-UID:shanghai-port-2026-2026-05-23-天津津门虎@shanghaiport.com
-SUMMARY:上海海港 vs 天津津门虎
-DESCRIPTION:中超联赛 2026赛季
-上海海港 主场 vs 天津津门虎
-球场: 上海浦东足球场
-LOCATION:上海浦东足球场
-GEO:31.1456,121.6008
-STATUS:CONFIRMED
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=Asia/Shanghai:20260529T193500
-DTEND;TZID=Asia/Shanghai:20260529T213500
-DTSTAMP:20260608T151601Z
-UID:shanghai-port-2026-2026-05-29-辽宁铁人@shanghaiport.com
-SUMMARY:上海海港 vs 辽宁铁人
-DESCRIPTION:中超联赛 2026赛季
-上海海港 客场 vs 辽宁铁人
-球场: 辽宁铁人（沈阳浑南）
-LOCATION:辽宁铁人（沈阳浑南）
-GEO:41.6230,123.5060
-STATUS:CONFIRMED
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=Asia/Shanghai:20260627T193500
-DTEND;TZID=Asia/Shanghai:20260627T213500
-DTSTAMP:20260608T151601Z
-UID:shanghai-port-2026-2026-06-27-河南队@shanghaiport.com
-SUMMARY:上海海港 vs 河南队
-DESCRIPTION:中超联赛 2026赛季
-上海海港 客场 vs 河南队
-球场: 郑州航海体育场
-LOCATION:郑州航海体育场
-GEO:34.7447,113.7278
-STATUS:CONFIRMED
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=Asia/Shanghai:20260704T190000
-DTEND;TZID=Asia/Shanghai:20260704T210000
-DTSTAMP:20260608T151601Z
-UID:shanghai-port-2026-2026-07-04-青岛西海岸@shanghaiport.com
-SUMMARY:上海海港 vs 青岛西海岸
-DESCRIPTION:中超联赛 2026赛季
-上海海港 客场 vs 青岛西海岸
-球场: 青岛青春足球场
-LOCATION:青岛青春足球场
-GEO:36.0850,120.3930
-STATUS:CONFIRMED
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=Asia/Shanghai:20260712T193500
-DTEND;TZID=Asia/Shanghai:20260712T213500
-DTSTAMP:20260608T151601Z
-UID:shanghai-port-2026-2026-07-12-大连英博@shanghaiport.com
-SUMMARY:上海海港 vs 大连英博
-DESCRIPTION:中超联赛 2026赛季
-上海海港 主场 vs 大连英博
-球场: 上海浦东足球场
-LOCATION:上海浦东足球场
-GEO:31.1456,121.6008
-STATUS:CONFIRMED
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=Asia/Shanghai:20260717T200000
-DTEND;TZID=Asia/Shanghai:20260717T220000
-DTSTAMP:20260608T151601Z
-UID:shanghai-port-2026-2026-07-17-云南玉昆@shanghaiport.com
-SUMMARY:上海海港 vs 云南玉昆
-DESCRIPTION:中超联赛 2026赛季
-上海海港 客场 vs 云南玉昆
-球场: 云南大学津桥学院
-LOCATION:云南大学津桥学院
-GEO:25.0420,102.7220
-STATUS:CONFIRMED
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=Asia/Shanghai:20260725T193500
-DTEND;TZID=Asia/Shanghai:20260725T213500
-DTSTAMP:20260608T151601Z
-UID:shanghai-port-2026-2026-07-25-上海申花@shanghaiport.com
-SUMMARY:上海海港 vs 上海申花
-DESCRIPTION:中超联赛 2026赛季
-上海海港 主场 vs 上海申花
-球场: 上海浦东足球场
-LOCATION:上海浦东足球场
-GEO:31.1456,121.6008
-STATUS:CONFIRMED
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=Asia/Shanghai:20260801T193500
-DTEND;TZID=Asia/Shanghai:20260801T213500
-DTSTAMP:20260608T151601Z
-UID:shanghai-port-2026-2026-08-01-山东泰山@shanghaiport.com
-SUMMARY:上海海港 vs 山东泰山
-DESCRIPTION:中超联赛 2026赛季
-上海海港 主场 vs 山东泰山
-球场: 上海浦东足球场
-LOCATION:上海浦东足球场
-GEO:31.1456,121.6008
-STATUS:CONFIRMED
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=Asia/Shanghai:20260809T193500
-DTEND;TZID=Asia/Shanghai:20260809T213500
-DTSTAMP:20260608T151601Z
-UID:shanghai-port-2026-2026-08-09-重庆铜梁龙@shanghaiport.com
-SUMMARY:上海海港 vs 重庆铜梁龙
-DESCRIPTION:中超联赛 2026赛季
-上海海港 客场 vs 重庆铜梁龙
-球场: 重庆奥体中心
-LOCATION:重庆奥体中心
-GEO:29.5286,106.4697
-STATUS:CONFIRMED
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=Asia/Shanghai:20260814T193500
-DTEND;TZID=Asia/Shanghai:20260814T213500
-DTSTAMP:20260608T151601Z
-UID:shanghai-port-2026-2026-08-14-武汉三镇@shanghaiport.com
-SUMMARY:上海海港 vs 武汉三镇
-DESCRIPTION:中超联赛 2026赛季
-上海海港 客场 vs 武汉三镇
-球场: 武汉体育中心
-LOCATION:武汉体育中心
-GEO:30.5812,114.1312
-STATUS:CONFIRMED
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=Asia/Shanghai:20260823T193500
-DTEND;TZID=Asia/Shanghai:20260823T213500
-DTSTAMP:20260608T151601Z
-UID:shanghai-port-2026-2026-08-23-青岛海牛@shanghaiport.com
-SUMMARY:上海海港 vs 青岛海牛
-DESCRIPTION:中超联赛 2026赛季
-上海海港 主场 vs 青岛海牛
-球场: 上海浦东足球场
-LOCATION:上海浦东足球场
-GEO:31.1456,121.6008
-STATUS:CONFIRMED
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=Asia/Shanghai:20260828T200000
-DTEND;TZID=Asia/Shanghai:20260828T220000
-DTSTAMP:20260608T151601Z
-UID:shanghai-port-2026-2026-08-28-深圳新鹏城@shanghaiport.com
-SUMMARY:上海海港 vs 深圳新鹏城
-DESCRIPTION:中超联赛 2026赛季
-上海海港 客场 vs 深圳新鹏城
-球场: 未知球场
-LOCATION:未知球场
-GEO:0.0,0.0
-STATUS:CONFIRMED
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=Asia/Shanghai:20260905T193500
-DTEND;TZID=Asia/Shanghai:20260905T213500
-DTSTAMP:20260608T151601Z
-UID:shanghai-port-2026-2026-09-05-北京国安@shanghaiport.com
-SUMMARY:上海海港 vs 北京国安
-DESCRIPTION:中超联赛 2026赛季
-上海海港 主场 vs 北京国安
-球场: 上海浦东足球场
-LOCATION:上海浦东足球场
-GEO:31.1456,121.6008
-STATUS:CONFIRMED
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=Asia/Shanghai:20261009T200000
-DTEND;TZID=Asia/Shanghai:20261009T220000
-DTSTAMP:20260608T151601Z
-UID:shanghai-port-2026-2026-10-09-浙江队@shanghaiport.com
-SUMMARY:上海海港 vs 浙江队
-DESCRIPTION:中超联赛 2026赛季
-上海海港 客场 vs 浙江队
-球场: 杭州黄龙体育中心
-LOCATION:杭州黄龙体育中心
-GEO:30.2844,120.1367
-STATUS:CONFIRMED
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=Asia/Shanghai:20261018T200000
-DTEND;TZID=Asia/Shanghai:20261018T220000
-DTSTAMP:20260608T151601Z
-UID:shanghai-port-2026-2026-10-18-成都蓉城@shanghaiport.com
-SUMMARY:上海海港 vs 成都蓉城
-DESCRIPTION:中超联赛 2026赛季
-上海海港 主场 vs 成都蓉城
-球场: 上海浦东足球场
-LOCATION:上海浦东足球场
-GEO:31.1456,121.6008
-STATUS:CONFIRMED
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=Asia/Shanghai:20261024T153000
-DTEND;TZID=Asia/Shanghai:20261024T173000
-DTSTAMP:20260608T151601Z
-UID:shanghai-port-2026-2026-10-24-天津津门虎@shanghaiport.com
-SUMMARY:上海海港 vs 天津津门虎
-DESCRIPTION:中超联赛 2026赛季
-上海海港 客场 vs 天津津门虎
-球场: 天津泰达体育场
-LOCATION:天津泰达体育场
-GEO:39.1469,117.2650
-STATUS:CONFIRMED
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=Asia/Shanghai:20261108T153000
-DTEND;TZID=Asia/Shanghai:20261108T173000
-DTSTAMP:20260608T151601Z
-UID:shanghai-port-2026-2026-11-08-辽宁铁人@shanghaiport.com
-SUMMARY:上海海港 vs 辽宁铁人
-DESCRIPTION:中超联赛 2026赛季
-上海海港 主场 vs 辽宁铁人
-球场: 上海浦东足球场
-LOCATION:上海浦东足球场
-GEO:31.1456,121.6008
-STATUS:CONFIRMED
-END:VEVENT
-END:VCALENDAR
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Shanghai Port FC Calendar//CN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:上海海港2026赛季赛程
+X-WR-TIMEZONE:Asia/Shanghai
+X-WR-CALDESC:上海海港足球俱乐部2026赛季赛程（超级杯/中超/足协杯/亚冠，含地图定位）
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Shanghai:20260301T153000
+DTEND;TZID=Asia/Shanghai:20260301T173000
+DTSTAMP:20260819T060553Z
+UID:shanghai-port-2026-0-2026-03-01@shanghaiport.com
+SUMMARY:上海海港 主场 vs 北京国安 (超级杯)
+DESCRIPTION:超级杯 2026赛季 超级杯
+上海海港 主场 vs 北京国安
+球场: 南京奥体中心
+比分: 0-2
+北京国安进球: 达万, 曹永竞
+裁判: 李海新(广东)
+LOCATION:南京奥体中心
+GEO:32.0030,118.7240
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Shanghai:20260307T193500
+DTEND;TZID=Asia/Shanghai:20260307T213500
+DTSTAMP:20260819T060553Z
+UID:shanghai-port-2026-1-2026-03-07@shanghaiport.com
+SUMMARY:上海海港 主场 vs 河南俱乐部 (中超联赛)
+DESCRIPTION:中超联赛 2026赛季 第1轮
+上海海港 主场 vs 河南俱乐部
+球场: 上海体育场
+比分: 1-2
+上海海港进球: 加布里埃尔
+河南俱乐部进球: 迈达纳, 钟义浩
+裁判: 唐顺齐
+LOCATION:上海体育场
+GEO:31.1447,121.4394
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Shanghai:20260315T190000
+DTEND;TZID=Asia/Shanghai:20260315T210000
+DTSTAMP:20260819T060553Z
+UID:shanghai-port-2026-2-2026-03-15@shanghaiport.com
+SUMMARY:上海海港 主场 vs 青岛西海岸 (中超联赛)
+DESCRIPTION:中超联赛 2026赛季 第2轮
+上海海港 主场 vs 青岛西海岸
+球场: 上海体育场
+比分: 4-1
+上海海港进球: 克劳德, 莱昂纳多, 武磊, 武磊
+青岛西海岸进球: 梅米舍维奇
+裁判: 贺凯
+LOCATION:上海体育场
+GEO:31.1447,121.4394
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Shanghai:20260320T190000
+DTEND;TZID=Asia/Shanghai:20260320T210000
+DTSTAMP:20260819T060553Z
+UID:shanghai-port-2026-3-2026-03-20@shanghaiport.com
+SUMMARY:上海海港 客场 vs 大连英博 (中超联赛)
+DESCRIPTION:中超联赛 2026赛季 第3轮
+上海海港 客场 vs 大连英博
+球场: 大连梭鱼湾足球场
+比分: 1-0
+大连英博进球: 阿奇姆彭
+裁判: 王竞
+LOCATION:大连梭鱼湾足球场
+GEO:38.8630,121.5910
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Shanghai:20260404T193500
+DTEND;TZID=Asia/Shanghai:20260404T213500
+DTSTAMP:20260819T060553Z
+UID:shanghai-port-2026-4-2026-04-04@shanghaiport.com
+SUMMARY:上海海港 主场 vs 云南玉昆 (中超联赛)
+DESCRIPTION:中超联赛 2026赛季 第4轮
+上海海港 主场 vs 云南玉昆
+球场: 上海体育场
+比分: 2-1
+上海海港进球: 莱昂纳多, 王燊超
+云南玉昆进球: 布尔克
+裁判: 黄翼
+LOCATION:上海体育场
+GEO:31.1447,121.4394
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Shanghai:20260411T193500
+DTEND;TZID=Asia/Shanghai:20260411T213500
+DTSTAMP:20260819T060553Z
+UID:shanghai-port-2026-5-2026-04-11@shanghaiport.com
+SUMMARY:上海海港 客场 vs 上海申花 (中超联赛)
+DESCRIPTION:中超联赛 2026赛季 第5轮
+上海海港 客场 vs 上海申花
+球场: 上海体育场
+比分: 1-0
+上海申花进球: 拉斐尔·拉唐
+裁判: 李海新
+LOCATION:上海体育场
+GEO:31.1447,121.4394
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Shanghai:20260417T193500
+DTEND;TZID=Asia/Shanghai:20260417T213500
+DTSTAMP:20260819T060553Z
+UID:shanghai-port-2026-6-2026-04-17@shanghaiport.com
+SUMMARY:上海海港 客场 vs 山东泰山 (中超联赛)
+DESCRIPTION:中超联赛 2026赛季 第6轮
+上海海港 客场 vs 山东泰山
+球场: 济南奥体中心
+比分: 1-1
+山东泰山进球: 克雷桑
+上海海港进球: 杨希
+裁判: 梁松尚
+LOCATION:济南奥体中心
+GEO:36.8280,117.0930
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Shanghai:20260421T200000
+DTEND;TZID=Asia/Shanghai:20260421T220000
+DTSTAMP:20260819T060553Z
+UID:shanghai-port-2026-7-2026-04-21@shanghaiport.com
+SUMMARY:上海海港 主场 vs 重庆铜梁龙 (中超联赛)
+DESCRIPTION:中超联赛 2026赛季 第7轮
+上海海港 主场 vs 重庆铜梁龙
+球场: 上海体育场
+比分: 1-2
+上海海港进球: 李新翔
+重庆铜梁龙进球: 迈克尔·恩加德乌-恩加朱伊, 陈纯新
+裁判: 张磊
+LOCATION:上海体育场
+GEO:31.1447,121.4394
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Shanghai:20260425T200000
+DTEND;TZID=Asia/Shanghai:20260425T220000
+DTSTAMP:20260819T060553Z
+UID:shanghai-port-2026-8-2026-04-25@shanghaiport.com
+SUMMARY:上海海港 主场 vs 武汉三镇 (中超联赛)
+DESCRIPTION:中超联赛 2026赛季 第8轮
+上海海港 主场 vs 武汉三镇
+球场: 上海体育场
+比分: 4-0
+上海海港进球: 魏震, 安佩姆, 蒋光太, 刘祝润
+裁判: 高常起
+LOCATION:上海体育场
+GEO:31.1447,121.4394
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Shanghai:20260502T190000
+DTEND;TZID=Asia/Shanghai:20260502T210000
+DTSTAMP:20260819T060553Z
+UID:shanghai-port-2026-9-2026-05-02@shanghaiport.com
+SUMMARY:上海海港 客场 vs 青岛海牛 (中超联赛)
+DESCRIPTION:中超联赛 2026赛季 第9轮
+上海海港 客场 vs 青岛海牛
+球场: 青岛国信体育场
+比分: 3-1
+青岛海牛进球: 罗森文, 亚乌·耶博阿, 金勇浩
+上海海港进球: 杨希
+裁判: 朱文彬
+LOCATION:青岛国信体育场
+GEO:36.0671,120.3826
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Shanghai:20260506T193500
+DTEND;TZID=Asia/Shanghai:20260506T213500
+DTSTAMP:20260819T060553Z
+UID:shanghai-port-2026-10-2026-05-06@shanghaiport.com
+SUMMARY:上海海港 主场 vs 深圳新鹏城 (中超联赛)
+DESCRIPTION:中超联赛 2026赛季 第10轮
+上海海港 主场 vs 深圳新鹏城
+球场: 上海体育场
+比分: 1-1
+深圳新鹏城进球: 周定洋
+裁判: 马运坤
+LOCATION:上海体育场
+GEO:31.1447,121.4394
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Shanghai:20260510T193500
+DTEND;TZID=Asia/Shanghai:20260510T213500
+DTSTAMP:20260819T060553Z
+UID:shanghai-port-2026-11-2026-05-10@shanghaiport.com
+SUMMARY:上海海港 客场 vs 北京国安 (中超联赛)
+DESCRIPTION:中超联赛 2026赛季 第11轮
+上海海港 客场 vs 北京国安
+球场: 北京工人体育场
+比分: 2-2
+北京国安进球: 张稀哲, 法比奥·阿布雷乌
+上海海港进球: 马特乌斯·维塔尔, 莱奥
+裁判: 马宁
+LOCATION:北京工人体育场
+GEO:39.9303,116.4380
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Shanghai:20260515T193500
+DTEND;TZID=Asia/Shanghai:20260515T213500
+DTSTAMP:20260819T060553Z
+UID:shanghai-port-2026-12-2026-05-15@shanghaiport.com
+SUMMARY:上海海港 主场 vs 浙江俱乐部 (中超联赛)
+DESCRIPTION:中超联赛 2026赛季 第12轮
+上海海港 主场 vs 浙江俱乐部
+球场: 上汽浦东足球场
+比分: 2-2
+上海海港进球: 维塔尔, 张源
+浙江俱乐部进球: 王宇栋, 高迪
+裁判: 单丹奥
+LOCATION:上汽浦东足球场
+GEO:31.2050,121.6290
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Shanghai:20260519T200000
+DTEND;TZID=Asia/Shanghai:20260519T220000
+DTSTAMP:20260819T060553Z
+UID:shanghai-port-2026-13-2026-05-19@shanghaiport.com
+SUMMARY:上海海港 客场 vs 成都蓉城 (中超联赛)
+DESCRIPTION:中超联赛 2026赛季 第13轮
+上海海港 客场 vs 成都蓉城
+球场: 成都凤凰山体育场
+比分: 0-1
+上海海港进球: 李新翔
+裁判: 李海新
+LOCATION:成都凤凰山体育场
+GEO:30.8783,104.0947
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Shanghai:20260523T190000
+DTEND;TZID=Asia/Shanghai:20260523T210000
+DTSTAMP:20260819T060553Z
+UID:shanghai-port-2026-14-2026-05-23@shanghaiport.com
+SUMMARY:上海海港 主场 vs 天津津门虎 (中超联赛)
+DESCRIPTION:中超联赛 2026赛季 第14轮
+上海海港 主场 vs 天津津门虎
+球场: 上海体育场
+比分: 1-1
+上海海港进球: 莱昂纳多
+天津津门虎进球: 沙达斯
+裁判: 张超
+LOCATION:上海体育场
+GEO:31.1447,121.4394
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Shanghai:20260529T193500
+DTEND;TZID=Asia/Shanghai:20260529T213500
+DTSTAMP:20260819T060553Z
+UID:shanghai-port-2026-15-2026-05-29@shanghaiport.com
+SUMMARY:上海海港 客场 vs 辽宁铁人 (中超联赛)
+DESCRIPTION:中超联赛 2026赛季 第15轮
+上海海港 客场 vs 辽宁铁人
+球场: 沈阳奥体中心
+比分: 3-2
+辽宁铁人进球: 盖伊·姆本扎, 国本拓弥, 杰弗尼奥
+上海海港进球: 李帅, 莱昂纳多
+裁判: 任通
+LOCATION:沈阳奥体中心
+GEO:41.6230,123.5060
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Shanghai:20260619T153000
+DTEND;TZID=Asia/Shanghai:20260619T173000
+DTSTAMP:20260819T060553Z
+UID:shanghai-port-2026-16-2026-06-19@shanghaiport.com
+SUMMARY:上海海港 客场 vs 上海賽更达 (足协杯)
+DESCRIPTION:足协杯 2026赛季 第4轮
+上海海港 客场 vs 上海賽更达
+球场: 上海
+比分: 1-2
+上海海港进球: 张琳芃, 刘祝润
+裁判: 李海新
+LOCATION:上海
+GEO:0.0,0.0
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Shanghai:20260627T193500
+DTEND;TZID=Asia/Shanghai:20260627T213500
+DTSTAMP:20260819T060553Z
+UID:shanghai-port-2026-17-2026-06-27@shanghaiport.com
+SUMMARY:上海海港 客场 vs 河南俱乐部 (中超联赛)
+DESCRIPTION:中超联赛 2026赛季 第16轮
+上海海港 客场 vs 河南俱乐部
+球场: 郑州航海体育场
+比分: 1-2
+河南俱乐部进球: 未知
+上海海港进球: 未知, 未知
+LOCATION:郑州航海体育场
+GEO:34.7447,113.7278
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Shanghai:20260704T190000
+DTEND;TZID=Asia/Shanghai:20260704T210000
+DTSTAMP:20260819T060553Z
+UID:shanghai-port-2026-18-2026-07-04@shanghaiport.com
+SUMMARY:上海海港 客场 vs 青岛西海岸 (中超联赛)
+DESCRIPTION:中超联赛 2026赛季 第17轮
+上海海港 客场 vs 青岛西海岸
+球场: 青岛西海岸体育场
+比分: 2-1
+青岛西海岸进球: 内尔松, 戴维森·达卢斯·佩雷拉
+上海海港进球: 安永佳
+裁判: 万涛
+LOCATION:青岛西海岸体育场
+GEO:36.0850,120.3930
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Shanghai:20260717T200000
+DTEND;TZID=Asia/Shanghai:20260717T220000
+DTSTAMP:20260819T060553Z
+UID:shanghai-port-2026-20-2026-07-17@shanghaiport.com
+SUMMARY:上海海港 客场 vs 云南玉昆 (中超联赛)
+DESCRIPTION:中超联赛 2026赛季 第19轮
+上海海港 客场 vs 云南玉昆
+球场: 玉溪高原体育场
+比分: 2-2
+云南玉昆进球: 奥斯卡·马里图
+上海海港进球: 魏震, 岳鑫
+裁判: 金京元
+LOCATION:玉溪高原体育场
+GEO:24.3510,102.5460
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Shanghai:20260721T190000
+DTEND;TZID=Asia/Shanghai:20260721T210000
+DTSTAMP:20260819T060553Z
+UID:shanghai-port-2026-33-2026-07-21@shanghaiport.com
+SUMMARY:上海海港 主场 vs 深圳新鹏城 (足协杯)
+DESCRIPTION:足协杯 2026赛季 第5轮
+上海海港 主场 vs 深圳新鹏城
+球场: 上汽浦东足球场
+比分: 1-1 (点球 4-3)
+上海海港进球: 让·克劳德·阿齐兹
+深圳新鹏城进球: 韦斯利·莫赖斯
+裁判: 高鹏
+LOCATION:上汽浦东足球场
+GEO:31.2050,121.6290
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Shanghai:20260725T193500
+DTEND;TZID=Asia/Shanghai:20260725T213500
+DTSTAMP:20260819T060553Z
+UID:shanghai-port-2026-21-2026-07-25@shanghaiport.com
+SUMMARY:上海海港 主场 vs 上海申花 (中超联赛)
+DESCRIPTION:中超联赛 2026赛季 第20轮
+上海海港 主场 vs 上海申花
+球场: 上汽浦东足球场
+比分: 2-0
+上海海港进球: 李新翔, 莱昂纳多
+裁判: 艾堃
+LOCATION:上汽浦东足球场
+GEO:31.2050,121.6290
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Shanghai:20260801T193500
+DTEND;TZID=Asia/Shanghai:20260801T213500
+DTSTAMP:20260819T060553Z
+UID:shanghai-port-2026-22-2026-08-01@shanghaiport.com
+SUMMARY:上海海港 主场 vs 山东泰山 (中超联赛)
+DESCRIPTION:中超联赛 2026赛季 第21轮
+上海海港 主场 vs 山东泰山
+球场: 上海体育场
+比分: 0-1
+山东泰山进球: 泽卡
+裁判: 牟宇晨
+LOCATION:上海体育场
+GEO:31.1447,121.4394
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Shanghai:20260809T193500
+DTEND;TZID=Asia/Shanghai:20260809T213500
+DTSTAMP:20260819T060553Z
+UID:shanghai-port-2026-23-2026-08-09@shanghaiport.com
+SUMMARY:上海海港 客场 vs 重庆铜梁龙 (中超联赛)
+DESCRIPTION:中超联赛 2026赛季 第22轮
+上海海港 客场 vs 重庆铜梁龙
+球场: 重庆龙兴体育场
+比分: 2-3
+重庆铜梁龙进球: 向余望(PK), 迈克尔·恩加德乌
+上海海港进球: 莱昂纳多, 魏震(PK), 莱昂纳多
+裁判: 张超
+LOCATION:重庆龙兴体育场
+GEO:29.5286,106.4697
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Shanghai:20260814T193500
+DTEND;TZID=Asia/Shanghai:20260814T213500
+DTSTAMP:20260819T060553Z
+UID:shanghai-port-2026-24-2026-08-14@shanghaiport.com
+SUMMARY:上海海港 客场 vs 武汉三镇 (中超联赛)
+DESCRIPTION:中超联赛 2026赛季 第23轮
+上海海港 客场 vs 武汉三镇
+球场: 武汉体育中心
+比分: 2-3
+武汉三镇进球: 洪德尔·卡迪斯, 安托万·莱奥泰
+上海海港进球: 魏震, 安佩姆, 安佩姆
+裁判: 艾堃
+LOCATION:武汉体育中心
+GEO:30.5812,114.1312
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Shanghai:20260819T193500
+DTEND;TZID=Asia/Shanghai:20260819T213500
+DTSTAMP:20260819T060553Z
+UID:shanghai-port-2026-19-2026-08-19@shanghaiport.com
+SUMMARY:上海海港 主场 vs 大连英博 (中超联赛)
+DESCRIPTION:中超联赛 2026赛季 第18轮(补赛)
+上海海港 主场 vs 大连英博
+球场: 上海体育场
+LOCATION:上海体育场
+GEO:31.1447,121.4394
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Shanghai:20260823T193500
+DTEND;TZID=Asia/Shanghai:20260823T213500
+DTSTAMP:20260819T060553Z
+UID:shanghai-port-2026-25-2026-08-23@shanghaiport.com
+SUMMARY:上海海港 主场 vs 青岛海牛 (中超联赛)
+DESCRIPTION:中超联赛 2026赛季 第24轮
+上海海港 主场 vs 青岛海牛
+球场: 上海体育场
+LOCATION:上海体育场
+GEO:31.1447,121.4394
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Shanghai:20260828T200000
+DTEND;TZID=Asia/Shanghai:20260828T220000
+DTSTAMP:20260819T060553Z
+UID:shanghai-port-2026-26-2026-08-28@shanghaiport.com
+SUMMARY:上海海港 客场 vs 深圳新鹏城 (中超联赛)
+DESCRIPTION:中超联赛 2026赛季 第25轮
+上海海港 客场 vs 深圳新鹏城
+球场: 深圳大运中心
+LOCATION:深圳大运中心
+GEO:22.7156,114.4114
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Shanghai:20260901T193500
+DTEND;TZID=Asia/Shanghai:20260901T213500
+DTSTAMP:20260819T060553Z
+UID:shanghai-port-2026-48-2026-09-01@shanghaiport.com
+SUMMARY:上海海港 客场 vs 山东泰山 (足协杯)
+DESCRIPTION:足协杯 2026赛季 第6轮
+上海海港 客场 vs 山东泰山
+球场: 济南奥体中心
+LOCATION:济南奥体中心
+GEO:36.8280,117.0930
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Shanghai:20260905T193500
+DTEND;TZID=Asia/Shanghai:20260905T213500
+DTSTAMP:20260819T060553Z
+UID:shanghai-port-2026-27-2026-09-05@shanghaiport.com
+SUMMARY:上海海港 主场 vs 北京国安 (中超联赛)
+DESCRIPTION:中超联赛 2026赛季 第26轮
+上海海港 主场 vs 北京国安
+球场: 上海体育场
+LOCATION:上海体育场
+GEO:31.1447,121.4394
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Shanghai:20260915T180000
+DTEND;TZID=Asia/Shanghai:20260915T200000
+DTSTAMP:20260819T060553Z
+UID:shanghai-port-2026-40-2026-09-15@shanghaiport.com
+SUMMARY:上海海港 客场 vs 拉查武里 (亚冠精英联赛)
+DESCRIPTION:亚冠精英联赛 2026赛季 第1轮
+上海海港 客场 vs 拉查武里
+球场: 叻丕体育场
+LOCATION:叻丕体育场
+GEO:13.5280,99.8130
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Shanghai:20261009T200000
+DTEND;TZID=Asia/Shanghai:20261009T220000
+DTSTAMP:20260819T060553Z
+UID:shanghai-port-2026-28-2026-10-09@shanghaiport.com
+SUMMARY:上海海港 客场 vs 浙江俱乐部 (中超联赛)
+DESCRIPTION:中超联赛 2026赛季 第27轮
+上海海港 客场 vs 浙江俱乐部
+球场: 杭州黄龙体育中心
+LOCATION:杭州黄龙体育中心
+GEO:30.2844,120.1367
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Shanghai:20261013T180000
+DTEND;TZID=Asia/Shanghai:20261013T200000
+DTSTAMP:20260819T060553Z
+UID:shanghai-port-2026-41-2026-10-13@shanghaiport.com
+SUMMARY:上海海港 主场 vs 大田韩亚市民 (亚冠精英联赛)
+DESCRIPTION:亚冠精英联赛 2026赛季 第2轮
+上海海港 主场 vs 大田韩亚市民
+球场: 浦东足球场
+LOCATION:浦东足球场
+GEO:31.2050,121.6290
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Shanghai:20261018T200000
+DTEND;TZID=Asia/Shanghai:20261018T220000
+DTSTAMP:20260819T060553Z
+UID:shanghai-port-2026-29-2026-10-18@shanghaiport.com
+SUMMARY:上海海港 主场 vs 成都蓉城 (中超联赛)
+DESCRIPTION:中超联赛 2026赛季 第28轮
+上海海港 主场 vs 成都蓉城
+球场: 上海体育场
+LOCATION:上海体育场
+GEO:31.1447,121.4394
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Shanghai:20261024T153000
+DTEND;TZID=Asia/Shanghai:20261024T173000
+DTSTAMP:20260819T060553Z
+UID:shanghai-port-2026-30-2026-10-24@shanghaiport.com
+SUMMARY:上海海港 客场 vs 天津津门虎 (中超联赛)
+DESCRIPTION:中超联赛 2026赛季 第29轮
+上海海港 客场 vs 天津津门虎
+球场: 天津奥体中心
+LOCATION:天津奥体中心
+GEO:39.1469,117.2650
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Shanghai:20261027T180000
+DTEND;TZID=Asia/Shanghai:20261027T200000
+DTSTAMP:20260819T060553Z
+UID:shanghai-port-2026-42-2026-10-27@shanghaiport.com
+SUMMARY:上海海港 主场 vs 河内公安 (亚冠精英联赛)
+DESCRIPTION:亚冠精英联赛 2026赛季 第3轮
+上海海港 主场 vs 河内公安
+球场: 浦东足球场
+LOCATION:浦东足球场
+GEO:31.2050,121.6290
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Shanghai:20261103T154500
+DTEND;TZID=Asia/Shanghai:20261103T174500
+DTSTAMP:20260819T060553Z
+UID:shanghai-port-2026-43-2026-11-03@shanghaiport.com
+SUMMARY:上海海港 客场 vs 纽卡斯尔喷气机 (亚冠精英联赛)
+DESCRIPTION:亚冠精英联赛 2026赛季 第4轮
+上海海港 客场 vs 纽卡斯尔喷气机
+球场: 纽卡斯尔体育场
+LOCATION:纽卡斯尔体育场
+GEO:-32.9280,151.7760
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Shanghai:20261108T153000
+DTEND;TZID=Asia/Shanghai:20261108T173000
+DTSTAMP:20260819T060553Z
+UID:shanghai-port-2026-31-2026-11-08@shanghaiport.com
+SUMMARY:上海海港 主场 vs 辽宁铁人 (中超联赛)
+DESCRIPTION:中超联赛 2026赛季 第30轮
+上海海港 主场 vs 辽宁铁人
+球场: 上海体育场
+LOCATION:上海体育场
+GEO:31.1447,121.4394
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Shanghai:20261124T201500
+DTEND;TZID=Asia/Shanghai:20261124T221500
+DTSTAMP:20260819T060553Z
+UID:shanghai-port-2026-44-2026-11-24@shanghaiport.com
+SUMMARY:上海海港 主场 vs 武里南联 (亚冠精英联赛)
+DESCRIPTION:亚冠精英联赛 2026赛季 第5轮
+上海海港 主场 vs 武里南联
+球场: 浦东足球场
+LOCATION:浦东足球场
+GEO:31.2050,121.6290
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Shanghai:20261201T180000
+DTEND;TZID=Asia/Shanghai:20261201T200000
+DTSTAMP:20260819T060553Z
+UID:shanghai-port-2026-45-2026-12-01@shanghaiport.com
+SUMMARY:上海海港 客场 vs 浦项铁人 (亚冠精英联赛)
+DESCRIPTION:亚冠精英联赛 2026赛季 第6轮
+上海海港 客场 vs 浦项铁人
+球场: 浦项钢园球场
+LOCATION:浦项钢园球场
+GEO:36.0130,129.3650
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Shanghai:20270209T180000
+DTEND;TZID=Asia/Shanghai:20270209T200000
+DTSTAMP:20260819T060553Z
+UID:shanghai-port-2026-46-2027-02-09@shanghaiport.com
+SUMMARY:上海海港 主场 vs 泰港 (亚冠精英联赛)
+DESCRIPTION:亚冠精英联赛 2026赛季 第7轮
+上海海港 主场 vs 泰港
+球场: 浦东足球场
+LOCATION:浦东足球场
+GEO:31.2050,121.6290
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Shanghai:20270216T180000
+DTEND;TZID=Asia/Shanghai:20270216T200000
+DTSTAMP:20260819T060553Z
+UID:shanghai-port-2026-47-2027-02-16@shanghaiport.com
+SUMMARY:上海海港 客场 vs 全北现代汽车 (亚冠精英联赛)
+DESCRIPTION:亚冠精英联赛 2026赛季 第8轮
+上海海港 客场 vs 全北现代汽车
+球场: 全州世界杯竞技场
+LOCATION:全州世界杯竞技场
+GEO:35.8380,127.1460
+STATUS:CONFIRMED
+END:VEVENT
+END:VCALENDAR
